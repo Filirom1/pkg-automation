@@ -1,0 +1,18 @@
+---
+items:
+- id: tomcat6
+  type: http
+  params: http://tomcat.apache.org/whichversion.html (6\.0\.\d+)
+- id: tomcat7
+  type: http
+  params: http://tomcat.apache.org/whichversion.html (7\.0\.\d+)
+  callback: package-tomcat
+- id: tomcat8
+  type: http
+  params: http://tomcat.apache.org/whichversion.html (8\.0\.\d+)
+- id: oracle-jre8
+  type: http
+  params: http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html Linux.*download.oracle.com.*(8u\d+-b\d+)
+- id: oracle-jdk8
+  type: http
+  params: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html Linux.*download.oracle.com.*(8u\d+-b\d+)

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+id=$1
+version=$2
+
+echo $id $version
+rm -fr ~/$id
+git clone https://github.com/Filirom1/rpm-${id}.git ~/$id
+
+spectool -R -g ~/$id/$i{id}.spec
+sed -i "s/Version:.*/Version:  $version/g" ~/$id/${id}.spec
+rpmbuild -bs ~/$id/${id}.spec
+rm -fr ~/$id
